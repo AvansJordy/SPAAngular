@@ -1,0 +1,112 @@
+<div class="row" style="margin-top: 20px;">
+  <div class="col-xs-12">
+    <form [formGroup]="eventForm" (ngSubmit)="onSubmit()">
+      <div class="row">
+        <div class="col-xs-12">
+          <button type="submit" class="btn btn-success itemStyle" [disabled]="!eventForm.valid">Save</button>
+          <button type="button" class="btn btn-danger itemStyle " (click)="onCancel()">Cancel</button>
+        </div>
+      </div>
+      <div class="row">
+      <div class="col-xs-12">
+        <div class="form-group">
+          <label for="name">Event Name</label>
+          <input type="text" id="name" formControlName="name" class="form-control">
+        </div>
+      </div>
+    </div>
+      <div class="row">
+        <div class="col-xs-12">
+          <div class="form-group">
+            <label for="price">Price</label>
+            <input type="text" id="price" formControlName="price" class="form-control">
+          </div>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col-xs-12">
+          <div class="form-group">
+            <label for="sportHall">SportHall</label>
+            <input type="text" id="sportHall" formControlName="sportHall" class="form-control">
+          </div>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col-xs-12">
+          <div class="form-group">
+            <label for="sport">Sport</label>
+            <input type="text" id="sport" formControlName="sport" class="form-control">
+          </div>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col-xs-12">
+          <div class="form-group">
+            <label for="availability">Availability</label>
+            <input type="text" id="availability" formControlName="availability" class="form-control">
+          </div>
+        </div>
+      </div>
+
+      <!--<div class="row">-->
+        <!--<div class="col-xs-12" formArrayName="platforms">-->
+          <!--<label>Platforms</label>-->
+          <!--&lt;!&ndash; Oorspronkelijk: <div class="row" *ngFor="let ingredientCtrl of recipeForm.get('ingredients').controls; let i = index" [formGroupName]="i" &ndash;&gt;-->
+          <!--<div class="row" *ngFor="let platformCtrl of gameForm['controls'].platforms['controls']; let i = index" [formGroupName]="i"-->
+               <!--style="margin-top: 10px;">-->
+            <!--&lt;!&ndash; De volgende regel voeg je ook toe &ndash;&gt;-->
+            <!--<pre *ngIf="platformCtrl">{{ platformCtrl.value | json }}</pre>-->
+            <!--<div class="col-xs-8">-->
+              <!--<input type="text" class="form-control" style="margin-bottom: 10px" formControlName="name" placeholder="Platform name">-->
+            <!--</div>-->
+            <!--<div class="col-xs-2">-->
+              <!--<button type="button" class="btn btn-danger itemStyle" (click)="onDeletePlatform(i)">X</button>-->
+            <!--</div>-->
+          <!--</div>-->
+          <!--<div class="row">-->
+            <!--<div class="col-xs-12">-->
+              <!--<button type="button" class="btn btn-success itemStyle" (click)="onAddPlatform()">Add Platform</button>-->
+            <!--</div>-->
+          <!--</div>-->
+          <!--<br/>-->
+          <!--<br/>-->
+        <!--</div>-->
+      <!--</div>-->
+
+      <!--<div class="row">-->
+        <!--<div class="col-xs-12" formArrayName="characters">-->
+          <!--<label>Characters</label>-->
+          <!--&lt;!&ndash; Oorspronkelijk: <div class="row" *ngFor="let ingredientCtrl of recipeForm.get('ingredients').controls; let i = index" [formGroupName]="i" &ndash;&gt;-->
+          <!--<div class="row" *ngFor="let characterCtrl of gameForm['controls'].characters['controls']; let i = index" [formGroupName]="i"-->
+               <!--style="margin-top: 10px;">-->
+            <!--&lt;!&ndash; De volgende regel voeg je ook toe &ndash;&gt;-->
+            <!--<pre *ngIf="characterCtrl">{{ characterCtrl.value | json }}</pre>-->
+            <!--<div class="col-xs-8">-->
+              <!--<input type="text" class="form-control" formControlName="name" placeholder="Character name">-->
+            <!--</div>-->
+            <!--<div class="col-xs-8">-->
+              <!--<input type="text" class="form-control" formControlName="imagePath" placeholder="Character image">-->
+            <!--</div>-->
+            <!--<div class="col-xs-2">-->
+              <!--<button type="button" class="btn btn-danger" (click)="onDeleteCharacter(i)">X</button>-->
+            <!--</div>-->
+          <!--</div>-->
+          <!--<hr>-->
+          <!--<div class="row">-->
+            <!--<div class="col-xs-12">-->
+              <!--<button type="button" class="btn btn-success" (click)="onAddCharacter()">Add Character</button>-->
+            <!--</div>-->
+          <!--</div>-->
+          <!--<br/>-->
+          <!--<br/>-->
+        <!--</div>-->
+      <!--</div>-->
+
+
+
+    </form>
+  </div>
+</div>
