@@ -6,6 +6,6 @@
 export const environment = {
   production: true,
   serverUrl: 'http://localhost:3000/api/v1',
-  serverUrlChar: 'http://localhost:3000/api/v1/characters/',
+  serverUrlChar: 'http://localhost:3000/api/v1/users/',
   serverUrlRel: 'http://localhost:3000/api/v1/gamesrel/'
 };
