@@ -6,6 +6,9 @@ import {EventStartComponent} from "./games/event-start/event-start.component";
 import {EventEditComponent} from "./games/event-edit/event-edit.component";
 import {EventDetailComponent} from "./games/event-detail/event-detail.component";
 import {UserAddComponent} from "./games/character-add/character-add.component";
+import {LoginRegisterComponent} from "./LoginRegister/loginregister.component";
+import {LoginComponent} from "./LoginRegister/Login/login.component";
+import {RegisterComponent} from "./LoginRegister/Register/register.component";
 
 const appRoutes: Routes = [
   // { path: '', redirectTo: '/recipes', pathMatch: 'full' },
@@ -18,6 +21,11 @@ const appRoutes: Routes = [
   // { path: 'shopping-list', component: ShoppingListComponent },
 
   { path: '', redirectTo: '/events', pathMatch: 'full' },
+  { path: 'login', component: LoginRegisterComponent, children: [
+    { path: '', component: LoginRegisterComponent },
+    { path: 'login', component: LoginComponent },
+    { path: 'register', component: RegisterComponent }
+  ] },
   { path: 'events', component: EventsComponent, children: [
     { path: '', component: EventStartComponent },
     { path: 'new', component: EventEditComponent },

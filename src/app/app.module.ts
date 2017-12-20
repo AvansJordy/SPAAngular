@@ -23,6 +23,9 @@ import {EventItemComponent} from "./games/event-list/event-item/event-item.compo
 import {UserDetailComponent} from "./character/user-detail/user-detail.component";
 import {EventsComponent} from "./games/events.component";
 import {UserAddComponent} from "./games/character-add/character-add.component";
+import {LoginRegisterComponent} from "./LoginRegister/loginregister.component";
+import {LoginComponent} from "./LoginRegister/Login/login.component";
+import {RegisterComponent} from "./LoginRegister/Register/register.component";
 
 
 
@@ -50,7 +53,10 @@ import {UserAddComponent} from "./games/character-add/character-add.component";
     EventItemComponent,
     EventStartComponent,
     EventsComponent,
-    UserAddComponent
+    UserAddComponent,
+    LoginRegisterComponent,
+    LoginComponent,
+    RegisterComponent
 
 
 
