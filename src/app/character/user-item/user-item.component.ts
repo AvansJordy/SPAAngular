@@ -1,10 +1,10 @@
 import {Component, EventEmitter, Input, OnInit, Output} from '@angular/core';
-import {User} from "../user.model";
+import {User} from "../../shared/user.model";
 
 
 
 @Component({
-  selector: 'app-character-item',
+  selector: 'app-user-item',
   templateUrl: './user-item.component.html',
   styleUrls: ['./user-item.component.css']
 })

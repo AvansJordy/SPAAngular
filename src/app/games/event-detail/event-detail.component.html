@@ -55,15 +55,19 @@
         <strong>Event Users:</strong>
         Are you not on the list? Add yourself to the event!
         <button routerLink="/events/editChar/{{event._id}}/" class="btn btn-primary">Add Character</button>
-        <ul class="list-group">
-          test
-          <li
-            class="list-group-item"
-            *ngFor="let user of event.users">
-            {{ user.name }}
-          </li>
-        </ul>
-      </div>
+    </div>
+    </div>
+  </div>
+
+  <div class="col-md-12" style="margin-top: 20px;">
+    <div>
+      <app-user-item
+        *ngFor="let characterEL of event.users"
+        [user]="characterEL"
+        [eventId]="event._id"
+        [index]="i"
+        (userSelected)="onGameSelected(characterEL)">
+      </app-user-item>
     </div>
   </div>
 

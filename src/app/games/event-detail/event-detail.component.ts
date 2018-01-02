@@ -3,6 +3,7 @@ import { ActivatedRoute, Params, Router } from '@angular/router';
 
 import { Event } from '../event.model';
 import {EventService} from '../event.service';
+import {User} from "../../shared/user.model";
 
 @Component({
   selector: 'app-game-detail',
@@ -10,7 +11,9 @@ import {EventService} from '../event.service';
   styleUrls: ['./event-detail.component.css']
 })
 export class EventDetailComponent implements OnInit {
-  event: Event = new Event();
+  event: Event = new Event({title: 'loading', imagePath: ''});
+  user: { name: string};
+  index: number;
   id: string;
 
   constructor(private eventService: EventService,
@@ -44,6 +47,13 @@ export class EventDetailComponent implements OnInit {
   onDeleteEvent() {
     this.eventService.deleteEvent(this.id);
     this.router.navigate(['/events']);
+  }
+
+  onGameSelected(user: User) {
+    console.log('click2');
+    this.user = user;
+    console.log(user);
+
   }
 
 }

@@ -1,14 +1,6 @@
-<a
-  style="cursor: pointer;margin-left: 5px;margin-right: 5px;"
-  (click)="onSelected()"
-  routerLinkActive="active"
-  class="list-group-item clearfix itemspace itemStyle col-md-3">
+<div
+  class="list-group-item clearfix itemspace itemStyle col-md-12">
   <div>
-    <h4 class="list-group-item-heading text-center">{{ user.name }}</h4>
+    <h4 class="list-group-item-heading">{{ user.name }}</h4>
   </div>
-
-  <div class="col-sm-12" style="margin-right: 20px;">
-    <button routerLink="/games/editChar/{{eventId}}/{{user._id}}" class="btn btn-primary"><span class="glyphicon glyphicon-edit"></span></button>
-    <button routerLink="/games/editChar/{{eventId}}/{{user._id}}" class="btn btn-danger"><span class="glyphicon glyphicon-trash"></span></button>
-  </div>
-</a>
+</div>

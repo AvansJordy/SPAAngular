@@ -11,7 +11,7 @@ export class EventService {
 
   private headers = new Headers({'Content-Type': 'application/json'});
   private serverUrl = environment.serverUrl + '/events/';
-  private serverNeoUrl = environment.serverUrlRel;
+  private serverUserUrl = environment.serverUrl + '/users/';
 
   private events: Event[];
   private users: EventUser[];
@@ -77,6 +77,7 @@ export class EventService {
   }
 
   getUser(index: string) {
+    console.log('getUsers 2222222222222222222222');
     if (index == null)
       return null;
     return this.http.get(environment.serverUrlChar + index, {headers: this.headers})
