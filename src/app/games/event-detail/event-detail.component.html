@@ -25,8 +25,8 @@
 
     <div class="row">
       <div class="col-xs-12">
-        <strong>Price: </strong><br>
-        {{ event.price }}
+        <strong>Price: </strong>
+        € {{ event.price }}
       </div>
     </div>
 
@@ -50,16 +50,17 @@
       </div>
     </div>
 
-    <div class="row">
-      <div class="col-xs-12">
-        <strong>Event Users:</strong>
-        Are you not on the list? Add yourself to the event!
-        <button routerLink="/events/editChar/{{event._id}}/" class="btn btn-primary">Add Character</button>
-    </div>
-    </div>
+
   </div>
 
   <div class="col-md-12" style="margin-top: 20px;">
+    <div class="row">
+    <div class="col-xs-12">
+      <strong>Event Users:</strong>
+      Are you not on the list? Add yourself to the event!
+      <button routerLink="/events/editChar/{{event._id}}/" class="btn btn-primary">Add Character</button>
+    </div>
+  </div>
     <div>
       <app-user-item
         *ngFor="let characterEL of event.users"
